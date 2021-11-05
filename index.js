@@ -1,10 +1,7 @@
-// npm packages
-
 const chalk = require('chalk');
 const {WAConnection, MessageType, Mimetype} = require('@adiwajshing/baileys');
+const fs = require('fs');
 const Axios = require('axios')
-
-// list message details
 
 const msgs = '*🚀 Alpha-X , is a WhatsApp helper bot written by [Yusuf Usta] and edited by 🙂 (SL-Alpha-X-Team.) Does not log into your account 🔎 It is written on WhatsApp Web API. 🔏* \n\n More details below 👇'
 const msg1 = '```Alpha-X Bot - Alpha Userbot is Open Source software open to development. \nThe user is responsible for all consequences that may arise from incorrect or misuse. \nSince it is an open source project, anyone can copy the software, add and remove,\nand use it in a way that they customize. In addition, plug-in support enables users to \ninstall their own plugins to the original software and use them as they wish.\nUsing the bot out of purpose will explicitly ban you.\nUsage is entirely the user\'s responsibility, Alpha Userbot is an \ninfrastructure only. Just as the operating system is not responsible \nfor the work done with the programs that are installed later, Alpha-X \nis not responsible for the usage purpose and method of the users.\nMarketing Alpha-X for money, making it available or having any material value\nıt is strictly forbidden to offer it for sale with anything. All legal investigations that may arise\nthe user is responsible.```'
@@ -20,16 +17,16 @@ async function AlphaX () {
     
     conn.on('connecting', async () => {
         console.log(`${chalk.blueBright.bold('<>======== ❇ Alpha-X ❇  ')}${chalk.red.bold('BOT QR CODE ========<>')}
-${chalk.white.bold('[[ New and speed version ALPHA-X Bot QR Code ]]')}
+${chalk.white.bold('[[ New and speed version of Alpha-X-Bot-QR Code ]]')}
 
-${chalk.green.bold('⚙ Alpha Connecting to Whatsapp Please wait...💹')}`);
+${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
     });
     
 // 'AlphaX;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')
 
     conn.on('open', async () => {
         console.log(
-            chalk.red('______________________ COPY THIS CODE __________________________ \n\n'), 
+            chalk.red('_____________________________ COPY THIS CODE ____________________________ \n'), 
             'Alpha-X;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')
         );
         
@@ -42,7 +39,7 @@ ${chalk.green.bold('⚙ Alpha Connecting to Whatsapp Please wait...💹')}`);
          {title: 'Is thid paid ?', description: `Answer a few frequently asked questions\n\n${msg4}`, rowId:"rowid6"}
          ]
 
-        const sections = [{title: "⚔️ Ａｌｐｈａ-Ｘ QR GEN 🌏", rows: rows}]
+        const sections = [{title: "⚔️ Alpha-X-Bot-QR-GEN v.2 🌏", rows: rows}]
 
        const button = {
         buttonText: 'Click here! 🔎',
@@ -55,11 +52,11 @@ ${chalk.green.bold('⚙ Alpha Connecting to Whatsapp Please wait...💹')}`);
         
         var alpha = await Axios.get(`https://telegra.ph/file/26a74a9135c705ad9043b.jpg`, { responseType: 'arraybuffer' })
         
-          await conn.sendMessage(conn.user.jid,Buffer.from(alpha.data), MessageType.image , {mimetype: Mimetype.png, caption: '*💹 Thanks for using Alpha-X*', thumnail:Buffer.from(alpha.data)})
+          await conn.sendMessage(conn.user.jid,Buffer.from(alpha.data), MessageType.image , {mimetype: Mimetype.png, caption: '*💹 Thanks for using Alpha-X*' })
 
         console.log(
-            chalk.whiteBright.bold('\n\n⚠ Please Do Not Share This Code With Anyone'), 
-            chalk.greenBright.bold('\nIF YOU CANNOT COPY THE MESSAGE, PLEASE CHECK WHATSAPP. QR CODE SENT TO YOUR OWN NUMBER! >>')
+            chalk.white.bold('*⚠ Please Do Not Share This Code With Anyone\n*'), 
+            chalk.greenBright.bold('IF YOU CANNOT COPY THE MESSAGE, PLEASE CHECK WHATSAPP. QR CODE SENT TO YOUR OWN NUMBER! >>')
         );
         process.exit(0);
     });
