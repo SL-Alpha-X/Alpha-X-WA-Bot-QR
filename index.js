@@ -31,18 +31,18 @@ ${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
         );
         
         const rows = [
-         {title: '<🔏> YOUR QR CODE <🔏>', description: '\n\nAlphaX;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64') + '\n\n*⚠ Please Do Not Share This Code With Anyone!* ' + conn.user.name , rowId:"rowid1"},
-         {title: '<💡 About Alpha-X 💡>', description: `\n\n${msg1}`, rowId:"rowid2"},
-         {title: '❌ Warning ❌', description: `\n\n${warn}`, rowId:"rowid3"},
-         {title: 'Can you read my messages ?', description: `Answer a few frequently asked questions\n\n${msg2}`, rowId:"rowid4"},
-         {title: 'What about our security ?', description: `Answer a few frequently asked questions\n\n${msg3}`, rowId:"rowid5"},
-         {title: 'Is thid paid ?', description: `Answer a few frequently asked questions\n\n${msg4}`, rowId:"rowid6"}
+         {title: '🔎 ʏᴏᴜʀ ǫʀ sᴇssɪᴏɴ', description: '\n\nAlphaX;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64') + '\n\n*⚠ Please Do Not Share This Code With Anyone!* ' + conn.user.name , rowId:"rowid1"},
+         {title: '📚 ᴀʙᴏᴜᴛ ᴀʟᴘʜᴀ-x', description: `\n\n${msg1}`, rowId:"rowid2"},
+         {title: '❌ ᴡᴀʀɴɪɴɢs ', description: `\n\n${warn}`, rowId:"rowid3"},
+         {title: '🤔 ᴄᴀɴ ʏᴏᴜ ʀᴇᴀᴅ ᴍʏ ᴍᴇssᴀɢᴇs ?', description: `Answer a few frequently asked questions\n\n${msg2}`, rowId:"rowid4"},
+         {title: '😐 ᴡʜᴀᴛ ᴀʙᴏᴜᴛ ᴏᴜʀ sᴇᴄᴜʀɪᴛʏ ?', description: `Answer a few frequently asked questions\n\n${msg3}`, rowId:"rowid5"},
+         {title: '🤕 ɪs ᴛʜɪs ᴘᴀɪᴅ ?', description: `Answer a few frequently asked questions\n\n${msg4}`, rowId:"rowid6"}
          ]
 
         const sections = [{title: "⚔️ Alpha-X-Bot-QR-GEN v.2 🌏", rows: rows}]
 
        const button = {
-        buttonText: 'Click here! 🔎',
+        buttonText: 'ᴄʟɪᴄᴋ ʜᴇʀᴇ 💝',
         description: msgs ,
         sections: sections,
         listType: 1
