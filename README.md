@@ -8,3 +8,6 @@
 bash <(curl -L https://tinyurl.com/Alpha-X-QR-CODE)
 
 ```
+
+### DAYS LEFT TO RELEASE BOT 😁
+`🍁 43 🍁`
