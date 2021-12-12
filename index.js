@@ -25,11 +25,9 @@ ${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
 // 'AlphaX;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')
 
     conn.on('open', async () => {
-        console.log(
-            chalk.red('_____________________________ COPY THIS CODE ____________________________ \n'), 
-            'Alpha-X;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')
-        );
         
+        console.log(chalk.blueBright.bold("Creating your session..."))
+
         const rows = [
          {title: '🔎 ʏᴏᴜʀ ǫʀ sᴇssɪᴏɴ', description: '\n\nAlphaX;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64') + '\n\n*⚠ Please Do Not Share This Code With Anyone!* ' + conn.user.name , rowId:"rowid1"},
          {title: '📚 ᴀʙᴏᴜᴛ ᴀʟᴘʜᴀ-x', description: `\n\n${msg1}`, rowId:"rowid2"},
@@ -52,13 +50,19 @@ ${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
         
         var alpha = await Axios.get(`https://telegra.ph/file/6c87d3ff428088d9ad58f.jpg`, { responseType: 'arraybuffer' })
         
-          await conn.sendMessage(conn.user.jid,Buffer.from(alpha.data), MessageType.image , {mimetype: Mimetype.png, caption: '*💹 Thanks for using Alpha-X*' })
+          await conn.sendMessage(conn.user.jid,Buffer.from(alpha.data), MessageType.image , {mimetype: Mimetype.png, caption: '*💹 Thanks for using Alpha-X*' , thumbnail: Buffer.from(alpha.data)})
 
         console.log(
-            chalk.white.bold('*⚠ Please Do Not Share This Code With Anyone\n*'), 
-            chalk.greenBright.bold('IF YOU CANNOT COPY THE MESSAGE, PLEASE CHECK WHATSAPP. QR CODE SENT TO YOUR OWN NUMBER! >>')
+            chalk.red('__________________________ COPY THIS CODE _________________________ \n'), 
+            chalk.greenBright.bold('Alpha-X;;;' + Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64'))
         );
-        process.exit(0);
+
+        console.log(
+            chalk.whiteBright.bold('\n⚠  Please Do Not Share This Code With Anyone '),
+            chalk.red( conn.user.name ),
+            chalk.blueBright.bold('\n\nif you can\'t copy the code, check your whatsapp number, its sent to your own number >>')
+        );
+//       process.exit(0);
     });
 
     await conn.connect();
