@@ -50,7 +50,7 @@ ${chalk.green.bold('⚙ Connecting to Whatsapp Please wait...💹')}`);
         
         await conn.sendMessage(conn.user.jid ,button, MessageType.listMessage)
         
-        var alpha = await Axios.get(`https://telegra.ph/file/26a74a9135c705ad9043b.jpg`, { responseType: 'arraybuffer' })
+        var alpha = await Axios.get(`https://telegra.ph/file/6c87d3ff428088d9ad58f.jpg`, { responseType: 'arraybuffer' })
         
           await conn.sendMessage(conn.user.jid,Buffer.from(alpha.data), MessageType.image , {mimetype: Mimetype.png, caption: '*💹 Thanks for using Alpha-X*' })
 
