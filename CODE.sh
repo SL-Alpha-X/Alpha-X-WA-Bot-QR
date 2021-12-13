@@ -7,7 +7,7 @@ pkg install git -qq -y
 clear
 npm install axios
 clear
-npm install chalk
+npm install chalk@4.1.2
 clear
 npm install @adiwajshing/baileys
 clear
