@@ -9,7 +9,7 @@ npm install axios
 clear
 npm install chalk@4.1.2
 clear
-npm install @adiwajshing/baileys
+npm install @adiwajshing/baileys@3.5.3
 clear
 git clone https://github.com/SL-Alpha-X/Alpha-X-WA-Bot-QR
 clear
